@@ -22,6 +22,8 @@ De connectors van de speaker van de hoorn (blauw en rood) kun je verbinden aan t
 
 Voor de pulsteller zitten binnen voor in de telefoon contactpunten. Bij elke puls wordt er contact gemaakt tussen blauw en geel. Verbind deze met twee GPIO-pinnen in de raspberry, pinnen 3 en aarde (of in een andere nummering, pin 5 en 6; het is het derde pinnetje boven en onder).
 
+Zie voor het aansluiten van de telefoon : https://pcmweb.nl/artikelen/programmeren/bouw-je-eigen-sommentelefoon-met-een-raspberry-pi/
+
 ### Software
 Installeer de software bijvoorbeeld in `/home/pi/sommentelefoon` op de raspberry.
 
