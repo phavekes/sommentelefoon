@@ -33,8 +33,13 @@ sudo amixer sset PCM,0 90% && python /home/pi/sommentelefoon/quiz.py &
 
 Het eerste stuk van dit commando zet het volume op 90%.
 
-### Sommen inspreken
-Voor het inspreken van de 90 sommen heb ik een proefversie van Voxover (voor OS X) gebruikt, in combinatie met `ffmpeg`. Iets anders zal ook wel werken. Maar je mag ook gewoon mijn stem gebruiken.
+<del>### Sommen inspreken
+Voor het inspreken van de 90 sommen heb ik een proefversie van Voxover (voor OS X) gebruikt, in combinatie met `ffmpeg`. Iets anders zal ook wel werken. Maar je mag ook gewoon mijn stem gebruiken.</del>
+### Tekst voor sommen 
+Het maaksommen.sh script genereert de mp3 bestanden voor voor de opgaven en de antwoorden, alsmede voor de verschillende (welkom, einde) teksten die uitgesporken worden door de telefoon. Hiervoor wordt de Google-tekst-to-speak engine gebruikt. Hiervoor is een internetverbinding nodig. Door deze mp3's vooraf te genereren kan de telefoon ook offline werken. Installeer de gtts lib van https://github.com/pndurette/gTTS met 
+...
+pip install gTTS
+...
 
 ### Starten
 Zet de raspberry aan (hij moest dus tot dit punt uit staan). Na ongeveer een minuut moet er nu een som door de hoorn klinken.
