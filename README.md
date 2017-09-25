@@ -2,6 +2,14 @@
 *T65-telefoon + raspberry pi = sommentelefoon*
 
 ## Idee
+Gebaseerd op 
+```
+https://github.com/tammojan/sommentelefoon
+```
+en 
+```
+https://pcmweb.nl/artikelen/programmeren/bouw-je-eigen-sommentelefoon-met-een-raspberry-pi/
+```
 Het idee is simpel: iets leuks en leerzaams doen met een oude draaischijftelefoon. De hardware hiervan is zo simpel dat ik het zelfs begrijp.
 
 De telefoon geeft (door de hoorn) een sommetje, en je moet het antwoord geven door het te draaien met de draaischijf. De telefoon zegt 'goed' of 'fout', en geeft de volgende som.
