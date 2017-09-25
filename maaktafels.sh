@@ -12,6 +12,7 @@ do
 done
 gtts-cli -l nl "Welkom bij de sommentelefoon!" -o "sound/welkom.mp3"
 gtts-cli -l nl "Geef het antwoord op de sommen door aan de draaischijf te draaien." -o "sound/uitlegdraaischijf.mp3"
+gtts-cli -l nl "Welke tafel wil je oefenen?." -o "sound/welketafel.mp3"
 gtts-cli -l nl "Dat is goed!" -o "sound/goed1.mp3"
 gtts-cli -l nl "Goedzo!" -o "sound/goed2.mp3"
 gtts-cli -l nl "Dat klopt!" -o "sound/goed3.mp3"
