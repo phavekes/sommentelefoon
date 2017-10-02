@@ -34,6 +34,10 @@ Zie voor het aansluiten van de telefoon : https://pcmweb.nl/artikelen/programmer
 
 ### Software
 Installeer de software bijvoorbeeld in `/home/pi/sommentelefoon` op de raspberry.
+```
+apt-get install sox mplayer
+pip install pygame
+```
 
 Om het programma automatisch te starten, voeg je de volgende regel toe aan `/etc/rc.local` (voor de regel met `exit 0`):
 
