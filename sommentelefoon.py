@@ -17,7 +17,7 @@ def speel(bestand):
 
 def speelSom(getal1, getal2):
     print "Wat is", getal1, "x", getal2,"?"
-    speel("/sound/som " + str(getal1) + " keer "+str(getal2)+".mp3")
+    speel("./sound/som " + str(getal1) + " keer "+str(getal2)+".mp3")
 
 
 def getNummer():
@@ -69,7 +69,7 @@ GPIO.setup(AARDPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
 # Gebruik een interrupt voor de hoorn,
 # omdat deze op elk moment kan worden neergelegd
-GPIO.add_event_detect(HOORNPIN, GPIO.BOTH, callback = hoornCallback)
+#GPIO.add_event_detect(HOORNPIN, GPIO.BOTH, callback = hoornCallback)
 
 pygame.mixer.init()
 
@@ -107,7 +107,7 @@ while True:
                 getal2 = 10
             else:
                 getal2 = tafeltje
-            print "Opgave is" + str(getal1) + " X " + str(getal2)
+            print "Opgave is " + str(getal1) + " X " + str(getal2)
             uitkomst = getal1 * getal2
             nCijfers = len(str(uitkomst))
 
@@ -136,7 +136,7 @@ while True:
             else:
                 print "Jammer, de juiste uitkomst is", uitkomst
                 speel("sound/fout1.mp3")
-                speel("/sound/antwoord " + str(getal1) + " keer "+getal2+".mp3")
+                speel("./sound/antwoord " + str(getal1) + " keer "+str(getal2)+".mp3")
             print
             time.sleep(1)
         speel("sound/einde.mp3")
