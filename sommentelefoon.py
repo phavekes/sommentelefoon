@@ -17,7 +17,7 @@ def speel(bestand):
 
 def speelSom(getal1, getal2):
     print "Wat is", getal1, "x", getal2,"?"
-    speel("/sound/som " + str(getal1) + " keer "+getal2+".mp3")
+    speel("/sound/som " + str(getal1) + " keer "+str(getal2)+".mp3")
 
 
 def getNummer():
@@ -80,6 +80,7 @@ while True:
         hoornContact = GPIO.input(HOORNPIN)
         while hoornContact == True:
             hoornContact = GPIO.input(HOORNPIN)
+            print hoornContact
             time.sleep (1)
 
         # Welk tafeltje oefenen?
