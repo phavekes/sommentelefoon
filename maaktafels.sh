@@ -1,13 +1,29 @@
 #!/bin/bash
+if ! which pip > /dev/null; then
+   echo -e "pip not found! Install? (y/n) \c"
+   read
+   if "$REPLY" = "y"; then
+      sudo apt-get install python-pip
+   fi
+fi
+if ! which gtts-cli > /dev/null; then
+   echo -e "gtts-cli not found! Install? (y/n) \c"
+   read
+   if "$REPLY" = "y"; then
+      sudo pip install gTTS
+   fi
+fi
+
+
 for ((x=1;x<=10;x++)); 
 do 
    # your-unix-command-here
    for ((y=1;y<=10;y++));
    do
    	echo "$x keer $y"
-   	gtts-cli -l nl "Hoeveel is $x keer $y?" -o "sound/som $x keer $y.mp3"
+   	gtts-cli -l nl "Hoeveel is $x keer $y?" -o "sound/som $x keer $y.mp3" 2>&1 >> /dev/null
    	antwoord=`echo "$x * $y" | bc`
-   	gtts-cli -l nl "$x keer $y is $antwoord" -o "sound/antwoord $x keer $y.mp3"
+   	gtts-cli -l nl "$x keer $y is $antwoord" -o "sound/antwoord $x keer $y.mp3" 2>&1 >> /dev/null
    done
 done
 gtts-cli -l nl "Welkom bij de sommentelefoon!" -o "sound/welkom.mp3"
@@ -21,4 +37,5 @@ gtts-cli -l nl "Helaas, fout." -o "sound/fout1.mp3"
 gtts-cli -l nl "Jammer, dat is niet goed." -o "sound/fout2.mp3"
 gtts-cli -l nl "Nee, dat klopt niet." -o "sound/fout3.mp3"
 gtts-cli -l nl "Dat is niet goed." -o "sound/fout4.mp3"
+gtts-cli -l nl "Dit is het einde van de opdracht, je kunt nu ophangen." -o "sound/einde.mp3"
 

@@ -17,10 +17,7 @@ def speel(bestand):
 
 def speelSom(getal1, getal2):
     print "Wat is", getal1, "x", getal2,"?"
-    speel("audio/" + str(getal1) + ".mp3")
-    speel("audio/keer.mp3")
-    speel("audio/" + str(getal2) + ".mp3")
-    speel("audio/is.mp3")
+    speel("/sound/som " + str(getal1) + " keer "+getal2+".mp3")
 
 
 def getNummer():
@@ -86,8 +83,9 @@ while True:
             time.sleep (1)
 
         # Welk tafeltje oefenen?
-        print "Welk tafeltje?"
-        speel("audio/welk.mp3")
+        print "Speel welkom"
+        speel("sound/welkom.mp3")
+        speel("sound/welketafel.mp3")
         tafeltje = getNummer()
 
         # Lijst om bij te houden welke sommen goed/fout beantwoord zijn
@@ -108,6 +106,7 @@ while True:
                 getal2 = 10
             else:
                 getal2 = tafeltje
+            print "Opgave is" + str(getal1) + " X " + str(getal2)
             uitkomst = getal1 * getal2
             nCijfers = len(str(uitkomst))
 
@@ -132,13 +131,13 @@ while True:
                 aantalGoed = aantalGoed + 1
                 sommen[getal1 - 1] = 1
                 print "Goed zo!"
-                speel("audio/goed.mp3")
+                speel("sound/goed1.mp3")
             else:
                 print "Jammer, de juiste uitkomst is", uitkomst
-                speel("audio/fout.mp3")
-                speel("audio/" + str(uitkomst) + ".mp3")
+                speel("sound/fout1.mp3")
+                speel("/sound/antwoord " + str(getal1) + " keer "+getal2+".mp3")
             print
             time.sleep(1)
-        speel("audio/einde.mp3")
+        speel("sound/einde.mp3")
     except KeyboardInterrupt: # Ctrl+C
         GPIO.cleanup()
