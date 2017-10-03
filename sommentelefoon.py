@@ -85,6 +85,7 @@ while True:
 
         # Welk tafeltje oefenen?
         print "Speel welkom"
+        speel("sound/kiestoon.wav")
         speel("sound/welkom.mp3")
         speel("sound/welketafel.mp3")
         tafeltje = getNummer()
@@ -128,17 +129,19 @@ while True:
             print antwoord
 
             # Controleer antwoord
+            reactie = random.randint(1,4)
             if int(antwoord) == uitkomst:
                 aantalGoed = aantalGoed + 1
                 sommen[getal1 - 1] = 1
                 print "Goed zo!"
-                speel("sound/goed1.mp3")
+                speel("sound/goed"+str(reactie)+".mp3")
             else:
-                print "Jammer, de juiste uitkomst is", uitkomst
-                speel("sound/fout1.mp3")
+                print "Jammer, de juiste uitkomst is ", uitkomst
+                speel("sound/fout"+str(reactie)+".mp3")
                 speel("./sound/antwoord " + str(getal1) + " keer "+str(getal2)+".mp3")
             print
             time.sleep(1)
         speel("sound/einde.mp3")
+        speel("sound/kiestoon.wav")
     except KeyboardInterrupt: # Ctrl+C
         GPIO.cleanup()
