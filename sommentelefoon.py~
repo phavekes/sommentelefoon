@@ -36,7 +36,7 @@ def speel(bestand):
 
 #speel de gekozen som af
 def speelSom(getal1, getal2):
-    log("Wat is"+ getal1+ "x"+ getal2+"?")
+    log("Wat is", getal1, "x", getal2,"?")
     speel("./sound/som " + str(getal1) + " keer "+str(getal2)+".mp3")
 
 #haal het nummer op van de draaischijf
