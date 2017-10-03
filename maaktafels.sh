@@ -17,7 +17,7 @@ fi
 
 for ((x=1;x<=10;x++)); 
 do 
-   # your-unix-command-here
+   gtts-cli -l nl "$x" -o "sound/$x.mp3" 2>&1 >> /dev/null
    for ((y=1;y<=10;y++));
    do
    	echo "$x keer $y"
@@ -38,4 +38,4 @@ gtts-cli -l nl "Jammer, dat is niet goed." -o "sound/fout2.mp3"
 gtts-cli -l nl "Nee, dat klopt niet." -o "sound/fout3.mp3"
 gtts-cli -l nl "Dat is niet goed." -o "sound/fout4.mp3"
 gtts-cli -l nl "Dit is het einde van de opdracht, je kunt nu ophangen." -o "sound/einde.mp3"
-
+gtts-cli -l nl "Oke, we gaan oefenen met de tafel van " -o "sound/gekozentafel.mp3"

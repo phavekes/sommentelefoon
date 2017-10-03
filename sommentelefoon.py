@@ -90,6 +90,11 @@ while True:
         speel("sound/welketafel.mp3")
         tafeltje = getNummer()
 
+        #Welke tafel is gekozen
+        if nummer > -1:
+            speel("sound/gekozentafel.mp3")
+            speel("sound/"+str(tafeltje)+".mp3")
+
         # Lijst om bij te houden welke sommen goed/fout beantwoord zijn
         sommen = []
         for som in range(10):
